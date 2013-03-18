@@ -19,6 +19,10 @@
 ,	"noWrapper": true
 
 	/*
+		Globally enable/disable map support on compilation
+	*/
+, "mapsEnabled": true
+	/*
 		Globally enable/disable watch mode.
 	*/
 ,	"watchEnabled": true

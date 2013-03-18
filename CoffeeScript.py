@@ -65,7 +65,10 @@ class CompileCommand(TextCommand):
 
 	def run(self, *args, **kwargs):
 		no_wrapper = settings.get('noWrapper', True)
+		maps_enabled = settings.get('mapsEnabled', True)
 		args = ['-c', self.view.file_name()]
+		if maps_enabled:
+			args = ['--map'] + args
 		if no_wrapper:
 			args = ['-b'] + args
 		result = run("coffee", args=args)
